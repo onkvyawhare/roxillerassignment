@@ -8,6 +8,15 @@ const mongoUrl = process.env.MONGODB_URL;
 // console.log(mongoUrl);
 app.use(express.json());
 
+
+
+app.use(
+	cors({
+		origin:"http://localhost:3000",
+		credentials:true,
+	})
+)
+
 // Connecting to MongoDB Database
 mongoose
   .connect(mongoUrl)
