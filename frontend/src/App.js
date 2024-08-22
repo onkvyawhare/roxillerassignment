@@ -22,7 +22,7 @@ const App = () => {
   const fetchTransactions = async (search = "", page = 1, perPage = 10) => {
     try {
       const response = await axios.get(
-        `http://localhost:4000/api/listTransactions`,
+        `http://https://roxillerassignment-1.onrender.com/api/listTransactions`,
         {
           params: { month, search, page, perPage },
         }
@@ -36,7 +36,7 @@ const App = () => {
   const fetchStatistics = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:4000/api/statistics`,
+        `http:https://roxillerassignment-1.onrender.com/api/statistics`,
         {
           params: { month },
         }
@@ -49,7 +49,7 @@ const App = () => {
 
   const fetchBarChartData = async () => {
     try {
-      const response = await axios.get(`http://localhost:4000/api/barChart`, {
+      const response = await axios.get(`http:https://roxillerassignment-1.onrender.com/api/barChart`, {
         params: { month },
       });
       setBarChartData(response.data);
